@@ -1,29 +1,19 @@
-# LUKSO - Foundry Template
+# LUKSO LSP Recipes
 
-Forge/Foundry project template to get started developing contracts from [`@lukso/lsp-smart-contracts`](https://github.com/lukso-network/lsp-smart-contracts).
-
-
-
-## Overview
-
-- ⚒️ Ready to use Foundry environnement with the `@lukso/lsp-smart-contracts` dependencies to get started quickly building contracts using the LUKSO LSP Smart Contracts.
+> TODO: description
 
 ## Getting started
 
-1. Click the **"Use this template"** button from this repo's home page to create a repository based on this template.
+1. [Install foundry](https://getfoundry.sh/).
 
-1. **Pre-requisites**:
-   - Install the [**`bun`** package manager](https://bun.sh/package-manager).
-   - [Install foundry](https://getfoundry.sh/).
+2. Install the [**`bun`** package manager](https://bun.sh/package-manager).
 
-2. Install the dependencies
+3. Install the dependencies
 
 ```bash
 forge install
 bun install
 ```
-
-You can now get started building!
 
 ## Development
 
@@ -71,42 +61,6 @@ forge snapshot
 $ anvil
 ```
 -->
-
-### Deploy + verify contracts
-
-The folder `script/` provide a script to deploy contracts. 
-
-1. Create a `.env` file, copy-paste inside the content of [`.env.example`](./.env.example)  and add your private key you will use to deploy.
-
-2. Run the following commands to deploy
-
-```shell
-# load the variables from the .env file
-source .env
-
-# Deploy and verify contract on LUKSO Testnet.
-forge script --chain 4201 script/deploy.s.sol:DeployScript --rpc-url $LUKSO_TESTNET_RPC_URL --broadcast --verify --verifier blockscout --verifier-url $BLOCKSCOUT_TESTNET_API_URL -vvvv
-
-# Deploy and verify contract on LUKSO Mainnet.
-forge script --chain 42 script/deploy.s.sol:DeployScript --rpc-url $LUKSO_MAINNET_RPC_URL --broadcast --verify --verifier blockscout --verifier-url $BLOCKSCOUT_MAINNET_API_URL -vvvv
-```
-
-<!-- ### Cast
-
-```shell
-$ cast <subcommand>
-``` 
--->
-
-### Help
-
-You can run the following commands to see easily the available options with `forge`, `anvil` and `cast`.
-
-```shell
-forge --help
-anvil --help
-cast --help
-```
 
 
 ## Documentation
